@@ -1,0 +1,26 @@
+{
+  "name": "lib_cardvalidator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "My lib of Card Validator",
+  "scripts": {
+    "test": "cardValidator()"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sabrina-88/Lib_cardValidator.git"
+  },
+  "keywords": [
+    "card",
+    "validator"
+  ],
+  "author": "Sabrina Andrade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sabrina-88/Lib_cardValidator/issues"
+  },
+  "homepage": "https://github.com/Sabrina-88/Lib_cardValidator#readme",
+  "dependencies": {
+    "global": "^4.3.2"
+  }
+}
