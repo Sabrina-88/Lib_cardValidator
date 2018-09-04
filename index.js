@@ -1,6 +1,6 @@
-let numberCard = prompt("Olá! Digite o número do seu Cartão de Crédito sem espaço.");
+let numberCard = prompt('Olá! Digite o número do seu Cartão de Crédito sem espaço.');
 if (numberCard === '' || isNaN(numberCard) || numberCard === ' ') {
-  alert("Atenção! Digite o SOMENTE os número do seu Cartão de Crédito.");
+  alert('Atenção! Digite o SOMENTE os número do seu Cartão de Crédito.');
 } else {
   let myArray = numberCard.split('');
   let myArrayInverted = myArray.reverse();
@@ -20,7 +20,7 @@ if (numberCard === '' || isNaN(numberCard) || numberCard === ' ') {
     let evenPosition = 0;
     let resultForOdd = 0;
     let total = 0;
-    for (i = 1; i < myArrayInverted.length; i++) { // arrayImpar
+    for (let i = 1; i < myArrayInverted.length; i++) { // arrayImpar
       resultForPair = myArrayInverted[i] * 2;
       if (resultForPair > 9) {
         resultForPair = resultForPair - 9;
@@ -30,7 +30,7 @@ if (numberCard === '' || isNaN(numberCard) || numberCard === ' ') {
       }
       i++;
     }
-    for (j = 0; j < myArrayInverted.length; j++) {
+    for (let j = 0; j < myArrayInverted.length; j++) {
       resultForOdd += myArrayInverted[j];
       j++;
     }
@@ -38,9 +38,9 @@ if (numberCard === '' || isNaN(numberCard) || numberCard === ' ') {
 	
 	
     if (total % 10 === 0) {
-      document.write("CARTÃO VÁLIDO!");
+      document.write('CARTÃO VÁLIDO!');
     } else {
-      document.write("CARTÃO INVÁLIDO!");
+      document.write('CARTÃO INVÁLIDO!');
     }
   }
   isValidCard(myArrayInverted);
