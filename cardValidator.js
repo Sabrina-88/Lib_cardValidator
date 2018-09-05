@@ -3,9 +3,16 @@ exports.cardValidator = function(number) {
   if (!number) {
     return ('Atenção: você precisa colocar um parâmetro');
   }
-  if (isNaN(number)) {
-    return ('Atenção: coloque somente numeros');	
+  //if (typeof number !== 'number'){
+//	  return ('Atenção: coloque somente numeros');
+//	 // throw new TypeError ('Atenção: coloque somente numeros');
+//	  }
+  if (typeof number === 'string') {
+    throw new Error('Atenção: coloque somente numeros');
   }
+  //if (isNaN(number)) {
+//    return ('Atenção: coloque somente numeros');	
+//  }
 	
   if (number.toString().length < 2) {
     throw new Error('Atenção: o número do cartão precisa ter mais de um dígito');
