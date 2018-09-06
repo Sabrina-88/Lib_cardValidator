@@ -1,27 +1,59 @@
-// funcao principal
-exports.cardValidator = function(number) { 
-  if (!number) {
-    return ('Atenção: você precisa colocar um parâmetro');
-  }
-  //if (typeof number !== 'number'){
-//	  return ('Atenção: coloque somente numeros');
-//	 // throw new TypeError ('Atenção: coloque somente numeros');
-//	  }
-  if (typeof number === 'string') {
-    throw new Error('Atenção: coloque somente numeros');
-  }
-  //if (isNaN(number)) {
-//    return ('Atenção: coloque somente numeros');	
-//  }
-	
-  if (number.toString().length < 2) {
+//DELETAR
+/*
+function cardValidator(numberCard) {
+  if (numberCard === '' || isNaN(numberCard) || numberCard === ' ') {
+    throw new Error ('Atenção! Digite o SOMENTE os número do seu Cartão de Crédito.');
+  } else {
+     if (numberCard.toString().length < 2) {
     throw new Error('Atenção: o número do cartão precisa ter mais de um dígito');
+   }
+   else{
+let result = isValidCard(numberCard);
+if (result == 0){
+  return true
+}else {
+  return false
+}
   }
-	
-  if (number === 36490102462661) {
-    return true;
   }
-  if (number === 123456789) {
-    return false;	
+ 
+  function isValidCard(numberCard) {
+    let myArray = numberCard.toString();
+    let myArrayInverted = myArray.split('').reverse();
+     function toArray(myArrayInverted) {
+    for (let i in myArrayInverted) {
+      myArrayInverted[i] = parseInt(myArrayInverted[i]);
+	 
+    }
+    return myArrayInverted;
   }
-};
+  toArray(myArrayInverted);
+
+    let resultForPair = 0;
+    let evenPosition = 0;
+    let resultForOdd = 0;
+    let total = 0;
+    for (let i = 1; i < myArrayInverted.length; i++) { // arrayImpar
+      resultForPair = myArrayInverted[i] * 2;
+      if (resultForPair > 9) {
+   
+        resultForPair = resultForPair - 9;
+        evenPosition = evenPosition + resultForPair;
+      } else {
+        evenPosition = evenPosition + resultForPair;
+      }
+      i++;
+    }
+    for (let j = 0; j < myArrayInverted.length; j++) {
+      resultForOdd += myArrayInverted[j];
+      j++;
+      }
+    total = evenPosition + resultForOdd;
+ 	
+  let result = total % 10;
+  return result;
+  }
+ }
+ cardValidator(5209770172209021);
+ 
+ module.exports.cardValidator = cardValidator;*/
